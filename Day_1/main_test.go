@@ -37,3 +37,12 @@ func TestSumLists(t *testing.T) {
 	}
 
 }
+
+func TestMultiplyLists(t *testing.T) {
+	got := multiplyLists(splitArray(getData("test.txt")))
+	want := 31
+	if got != want {
+		t.Errorf("got %q want %q", got, want)
+	}
+
+}

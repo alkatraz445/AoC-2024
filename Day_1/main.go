@@ -36,8 +36,6 @@ func getData(filename string) []int {
 	var twoArraysString []string
 	var twoArraysTemp []string
 	var twoArrays []int
-	// data, err := os.ReadFile(filename)
-	// check(err)
 
 	readFile, err := os.Open(filename)
 
@@ -64,8 +62,6 @@ func getData(filename string) []int {
 		check(err)
 		twoArrays = append(twoArrays, newVal)
 	}
-
-	fmt.Println(twoArrays)
 
 	return twoArrays
 }
@@ -97,9 +93,23 @@ func sumLists(firstColumn, secondColumn []int) int {
 	var sum int = 0
 
 	for i := range firstColumn {
-		fmt.Println(firstColumn[i])
 		sum += absInt(firstColumn[i] - secondColumn[i])
-		fmt.Println(sum)
+	}
+	return sum
+}
+
+func multiplyLists(firstColumn, secondColumn []int) int {
+	sum := 0
+	count := make(map[int]int)
+	for _, firstVal := range firstColumn {
+		for _, secondVal := range secondColumn {
+			if firstVal == secondVal {
+				count[firstVal] = count[firstVal] + 1
+			}
+		}
+	}
+	for k, v := range count {
+		sum += k * v
 	}
 	return sum
 }
@@ -107,7 +117,7 @@ func sumLists(firstColumn, secondColumn []int) int {
 func main() {
 	array := getData("input.txt")
 	a, b := splitArray(array)
-	result := sumLists(a, b)
-	println(result)
+	fmt.Printf("Part 1: %d\n", sumLists(a, b))
+	fmt.Printf("Part 2: %d\n", multiplyLists(a, b))
 
 }
