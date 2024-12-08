@@ -4,4 +4,5 @@ Some days are written in Python, some in Go, and some will be written in somethi
 
 | Day                                        | Solved | Part 1 time (ms) | Part 2 time (ms) | Language |
 |--------------------------------------------|:------:|-----------------:|-----------------:|---------:|
-| [Day 1: Historian Hysteria]()               |   ⭐️   |      0.299 |                - |                Go |    
+| [Day 1: Historian Hysteria]()               |   ⭐️⭐️   |      13 |                13 |                Go |    
+| [Day 2: Red-Nosed Reports]()               |   ⭐️   |      14 |                - |                Go |    

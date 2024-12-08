@@ -28,3 +28,4 @@ go.work.sum
 # AoC ignore input
 
 input.txt
+test.txt
